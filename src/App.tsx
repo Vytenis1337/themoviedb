@@ -10,7 +10,6 @@ import { Library } from './pages/library/Library';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GlobalProvider } from './reducers/GlobalState';
 import { Home } from './pages/home/Home';
-import dotenv from 'dotenv';
 
 function App() {
   const queryClient = new QueryClient();

@@ -8,12 +8,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { singleMenuSettings } from '../../utils/movieListSettings';
 
-interface stepType {
-  id: string;
-}
-interface useStepType {
-  appId: stepType;
-}
+// interface stepType {
+//   id: string;
+// }
+// interface useStepType {
+//   appId: stepType;
+// }
 
 export const SingleMenu = ({ appId }: any) => {
   const { isLoading, error, data, refetch } = useQuery({
@@ -30,7 +30,7 @@ export const SingleMenu = ({ appId }: any) => {
 
   useEffect(() => {
     refetch();
-  }, [appId]);
+  }, [appId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className='single-menu'>

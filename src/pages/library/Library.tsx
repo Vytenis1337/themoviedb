@@ -9,7 +9,7 @@ import newRequest from '../../utils/newRequest';
 export const Library = () => {
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
 
-  const { isLoading, error, data, refetch } = useQuery({
+  const { isLoading, error, data } = useQuery({
     queryKey: ['myMovies'],
     queryFn: () =>
       newRequest.get(`/movies?userId=${currentUser._id}`).then((res) => {

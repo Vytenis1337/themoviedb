@@ -22,7 +22,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     refetch();
-  }, [data]);
+  }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleLogout = async () => {
     try {

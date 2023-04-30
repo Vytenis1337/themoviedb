@@ -59,7 +59,7 @@ export const Details = () => {
 
   useEffect(() => {
     refetch();
-  }, [appId]);
+  }, [appId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const base_url = 'https://image.tmdb.org/t/p/original/';
 
