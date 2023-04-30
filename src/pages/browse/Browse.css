@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Prata');
+
+.browse {
+  margin: auto;
+  padding: 100px;
+
+  color: #333;
+}
+.post {
+  padding: 30px 20px;
+}
+
+.browse-h1 {
+  font-size: 72px;
+  font-family: Prata;
+  background: -webkit-linear-gradient(black, black);
+  box-shadow: #ffd700 4px 4px 0 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* card style start */
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-slide *:focus {
+  outline: none;
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .slick-slide > div {
+    margin: 0 10px;
+  }
+  .post {
+    padding: 20px 10px;
+  }
+  .browse-h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .slick-slide > div {
+    margin: 0 10px;
+  }
+  .post {
+    padding: 20px 10px;
+  }
+  .posts {
+    margin-top: 10px;
+    padding: 50px;
+  }
+  .browse-h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 767px) {
+  .slick-slide > div {
+    margin: 0 10px;
+  }
+  .post {
+    padding: 20px 10px;
+  }
+  .posts {
+    margin-top: 15px;
+    padding: 40px;
+  }
+  .browse-h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .slick-slide > div {
+    margin: 0 5px;
+  }
+  .post {
+    padding: 10px 5px;
+  }
+  .posts {
+    margin-top: 20px;
+    padding: 30px;
+  }
+  .browse-h1 {
+    font-size: 50px;
+  }
+}

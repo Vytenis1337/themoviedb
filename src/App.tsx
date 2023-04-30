@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Navbar } from './components/Navbar/Navbar';
+import { Browse } from './pages/browse/Browse';
+import { Login } from './pages/login/Login';
+import { Register } from './pages/register/Register';
+import { Details } from './pages/details/Details';
+
+import { Player } from './pages/player/Player';
+import { Library } from './pages/library/Library';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { GlobalProvider } from './reducers/GlobalState';
+import { Home } from './pages/home/Home';
+import dotenv from 'dotenv';
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <QueryClientProvider client={queryClient}>
+        <GlobalProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/browse' element={<Browse />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/movies/single/:id' element={<Details />} />
+              <Route path='/player/:id' element={<Player />} />
+              <Route path='/library' element={<Library />} />
+            </Routes>
+          </BrowserRouter>
+        </GlobalProvider>
+      </QueryClientProvider>
     </div>
   );
 }

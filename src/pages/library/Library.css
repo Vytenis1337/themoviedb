@@ -1,0 +1,11 @@
+.library {
+  text-align: center;
+  background: #e3e3e3;
+}
+
+.library-content {
+  max-width: 800px;
+  border: 2px solid black;
+  margin: auto;
+  background: white;
+}

@@ -1,0 +1,17 @@
+.video {
+  margin-top: 40px;
+}
+
+.video-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-player {
+  margin: auto;
+}
