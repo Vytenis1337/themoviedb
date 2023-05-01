@@ -5,10 +5,14 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: auto;
+  max-width: 800px;
+  background: transparent;
 }
 .single-top {
   display: flex;
-  justify-content: space-between;
+
+  justify-content: space-evenly;
 }
 
 .single-title {
@@ -17,37 +21,74 @@
   margin-bottom: 20px;
 }
 
-.single-h1 {
-  font-size: 60px;
-  font-family: Prata;
-  color: #333;
+.back-button {
+  margin: auto 0;
+  transform: translatex(-200px);
+  color: black;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 18px;
+  width: max-content;
+  height: max-content;
   text-align: center;
-  margin: 0;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.back-button:hover {
+  border: 1px solid #ffd700;
+
+  color: black;
+}
+.single-h1 {
+  font-size: 30px;
+
+  color: #00bbf0;
+  text-align: center;
+
   box-shadow: #00bbf0 4px 4px 0 0;
 }
 
 .single-release {
-  font-size: 18px;
+  font-size: 14px;
+  color: #ffd700;
   text-align: left;
+}
+
+.single-release span {
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+}
+
+.single-content-both-sides {
+  display: flex;
+}
+
+.single-content-left-side {
+  display: flex;
+  flex-direction: column;
 }
 
 .single-img {
   margin: auto;
-  height: 600px;
-  width: 40%;
+  max-height: 300px;
+  max-width: 200px;
 }
 
 .single-description {
-  margin: auto;
+  max-width: 300px;
   padding: 5px 5px;
   display: flex;
   display-direction: column;
-  width: 600px;
-  box-shadow: #ffd700 4px 4px 0 0;
 }
 .single-rating {
   display: flex;
   flex-direction: column;
+  color: white;
 }
 
 .single-movie-rating {
@@ -57,12 +98,15 @@
 .single-movie-rating-span {
   font-weight: normal;
   padding: 5px;
+  color: #ffd700;
 }
 
 .single-p {
-  text-align: justify;
-  font-size: 20px;
-  line-height: 30px;
+  text-align: left;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
 }
 
 .single-watch-library {
@@ -71,10 +115,10 @@
   flex-direction: column;
 }
 
-.single-button {
+.watch-button {
   background-color: #00bbf0;
   border: 2px solid black;
-  border-radius: 30px;
+  border-radius: 10px;
   box-shadow: black 4px 4px 0 0;
   color: black;
   cursor: pointer;
@@ -89,17 +133,13 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.single-button:hover {
+.watch-button:hover {
   border: 1px solid white;
 
   color: black;
 }
 
-.single-menu {
-  display: flex;
-  flex-direction: column;
-}
-.content-button {
+.library-button {
   background-color: #ffd700;
   border: 2px solid black;
   border-radius: 30px;
@@ -117,56 +157,69 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.content-button:hover {
+.library-button:hover {
   border: 1px solid white;
 
   color: black;
 }
-.content-button:disabled {
+.library-button:disabled {
   background-color: red;
+  color: red;
+}
+
+.single-menu {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .back-button {
+    transform: translatex(-150px);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .single-h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .single-p {
-    font-size: 25px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 30px;
   }
-  .single-img {
-    width: 80%;
-    height: 600px;
+  .back-button {
+    transform: translatex(-100px);
   }
 }
 
 @media screen and (min-width: 651px) and (max-width: 767px) {
   .single-h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
   .single-p {
-    font-size: 25px;
+    font-size: 14px;
     line-height: 20px;
   }
-  .single-img {
-    width: 80%;
-    height: 500px;
+  .back-button {
+    transform: translatex(-75px);
   }
 }
 
 @media screen and (max-width: 650px) {
+  .single-top {
+  }
   .single-h1 {
-    font-size: 40px;
+    font-size: 30px;
+  }
+
+  .single-description {
+    width: 90vw;
   }
   .single-p {
-    font-size: 25px;
+    text-align: justify;
+    font-size: 14px;
     line-height: 20px;
   }
-  .single-img {
-    width: 80%;
-    height: 400px;
+  .back-button {
+    transform: translatex(0);
   }
 }

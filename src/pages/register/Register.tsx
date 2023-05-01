@@ -14,7 +14,7 @@ export const Register = () => {
 
   const navigate = useNavigate();
 
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -30,30 +30,44 @@ export const Register = () => {
 
   return (
     <div className='auth'>
-      <h1>Register</h1>
-      <form>
+      <form className='auth-form'>
+        <h1 className='auth-h1'>Register</h1>
+        <label className='auth-label' htmlFor=''>
+          Username
+        </label>
         <input
+          className='auth-input'
           required
           type='text'
           placeholder='username'
           name='username'
           onChange={handleChange}
         />
+        <label className='auth-label' htmlFor=''>
+          Email
+        </label>
         <input
+          className='auth-input'
           required
           type='email'
           placeholder='email'
           name='email'
           onChange={handleChange}
         />
+        <label className='auth-label' htmlFor=''>
+          Password
+        </label>
         <input
+          className='auth-input'
           required
           type='password'
           placeholder='password'
           name='password'
           onChange={handleChange}
         />
-        <button onClick={handleSubmit}>Register</button>
+        <button className='auth-button' onClick={handleSubmit}>
+          Register
+        </button>
         {err && <p>{err}</p>}
         <span>
           Do you have an account? <Link to='/login'>Login</Link>

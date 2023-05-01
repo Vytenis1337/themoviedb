@@ -1,13 +1,12 @@
 .library-card {
   display: flex;
-  margin: auto;
+
   border-radius: 4px;
   background: transparent;
-  max-height: 300px;
+  max-height: 250px;
   overflow: hidden;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
-  height: max-content;
   width: 100%;
 }
 
@@ -16,8 +15,8 @@
 }
 
 .library-img {
-  min-width: 200px;
-  max-height: 250px;
+  min-width: 150px;
+  max-height: 200px;
 }
 
 .library-body {
@@ -30,7 +29,6 @@
 .library-title {
   font-size: 20px;
   font-weight: bold;
-  font-family: Prata;
 }
 .library-buttons {
   display: flex;
@@ -40,7 +38,7 @@
 .library-button-details {
   background-color: #ffd700;
   border: 2px solid black;
-  border-radius: 30px;
+  border-radius: 5px;
   box-shadow: black 4px 4px 0 0;
   color: black;
   cursor: pointer;
@@ -57,7 +55,7 @@
 }
 
 .library-button-remove {
-  background-color: #00bbf0;
+  background-color: #f95959;
   border: 2px solid black;
   border-radius: 30px;
   box-shadow: black 4px 4px 0 0;
@@ -75,6 +73,12 @@
   touch-action: manipulation;
 }
 .library-button-details:hover {
+  border: 1px solid white;
+
+  color: black;
+}
+
+.library-button-remove:hover {
   border: 1px solid white;
 
   color: black;

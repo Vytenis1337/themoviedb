@@ -34,7 +34,7 @@ export const SingleMenu = ({ appId }: any) => {
 
   return (
     <div className='single-menu'>
-      <h1 className='single-menu-h1'>Other Posts You may like</h1>
+      <h1 className='single-menu-h1'>Similar Movies</h1>
       {isLoading ? (
         'loading'
       ) : error ? (

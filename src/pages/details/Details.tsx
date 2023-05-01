@@ -32,6 +32,7 @@ export const Details = () => {
           return res.data;
         }),
   });
+
   const navigate = useNavigate();
 
   const mutation = useMutation({
@@ -73,46 +74,51 @@ export const Details = () => {
         <div>
           <div className='single-content'>
             <div className='single-top'>
-              <button className='content-button' onClick={() => navigate(-1)}>
-                <BiArrowBack size={40} />
+              <button className='back-button' onClick={() => navigate(-1)}>
+                <BiArrowBack size={25} />
               </button>
               <div className='single-title'>
                 <h1 className='single-h1'>{data.title}</h1>
                 <div className='single-release'>
-                  Release Date:{data.release_date}
+                  Release Date:
+                  <span>{data.release_date}</span>
                 </div>
               </div>
-              <button className='content-button'>Edit</button>
             </div>
-            <img
-              className='single-img'
-              src={`${base_url}${data.poster_path}`}
-              alt={data.title}
-            />
-            <div className='single-rating'>
-              <div className='single-movie-rating'>
-                <span className='single-movie-rating-span'>Movie Rating:</span>
-                {data.vote_average}
+            <div className='single-content-both-sides'>
+              <div className='single-content-left-side'>
+                <img
+                  className='single-img'
+                  src={`${base_url}${data.poster_path}`}
+                  alt={data.title}
+                />
+                <div className='single-rating'>
+                  <div className='single-movie-rating'>
+                    <span className='single-movie-rating-span'>
+                      Movie Rating:
+                    </span>
+                    {data.vote_average}
+                  </div>
+                  <div className='single-movie-rating'>
+                    <span className='single-movie-rating-span'>
+                      Total Votes:
+                    </span>
+                    {data.vote_count}
+                  </div>
+                </div>
               </div>
-              <div className='single-movie-rating'>
-                <span className='single-movie-rating-span'>Total Votes:</span>
-                {data.vote_count}
+              <div className='single-description'>
+                <p className='single-p'>{data.overview}</p>{' '}
               </div>
-            </div>
-            <div className='single-description'>
-              <p className='single-p'>{data.overview}</p>{' '}
             </div>
             <div className='single-watch-library'>
               <Link to={`/player/${appId}`} state={data.title}>
-                <button className='single-button'>Watch Trailer</button>
+                <button className='watch-button'>Watch Trailer</button>
               </Link>
-              <button
-                // disabled={checkId.some((lib) => lib.id === state.id)}
-                className='single-button'
-                onClick={handleClick}
-              >
+
+              <button className='library-button' onClick={handleClick}>
                 Add to Library
-              </button>{' '}
+              </button>
             </div>
           </div>
           <div className='single-menu'>

@@ -6,10 +6,15 @@ export const Home = () => {
     <div className='home'>
       <div className='home-content'>
         <Link to={'/login'}>
-          <button className='home-button'>Login</button>
+          <button className='home-button'>
+            {' '}
+            <span>Login</span>
+          </button>
         </Link>
         <Link to={'/browse'}>
-          <button className='home-button'>Browse</button>
+          <button className='home-button'>
+            <span>Browse</span>
+          </button>
         </Link>
       </div>
     </div>

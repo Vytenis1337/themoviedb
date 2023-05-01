@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player/youtube';
 import { useNavigate } from 'react-router-dom';
+import { BiArrowBack } from 'react-icons/bi';
 
 export const Player = () => {
   const { pathname } = useLocation();
@@ -21,25 +22,27 @@ export const Player = () => {
           return res.data.results;
         }),
   });
-  console.log(data);
+
   const navigate = useNavigate();
   return (
-    <div className='video'>
+    <div className='player'>
       {isLoading ? (
         'loading'
       ) : error ? (
         'Something went wrong!'
       ) : (
-        <div className='video-content'>
-          <div className='video-top'>
-            <button className='content-button' onClick={() => navigate(-1)}>
-              go back
+        <div className='player-content'>
+          <div className='player-top'>
+            <button className='player-back-button' onClick={() => navigate(-1)}>
+              <BiArrowBack size={30} />
             </button>
-            <h1 className='single-h1'>{state}</h1>
-            <button className='content-button'>Edit</button>
+            <h1 className='player-h1'>{state}</h1>
           </div>
           <div className='video-player'>
             <ReactPlayer
+              controls={true}
+              width='100%'
+              height={400}
               url={`https://www.youtube.com/watch?v=${data[1].key}`}
             />
           </div>

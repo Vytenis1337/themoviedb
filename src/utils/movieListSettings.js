@@ -1,9 +1,32 @@
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: 'block', background: 'black' }}
+//       onClick={onClick}
+//     />
+//   );
+// }
+
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: 'block', background: 'black' }}
+//       onClick={onClick}
+//     />
+//   );
+// }
+
 export const browseSettings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 6,
   slidesToScroll: 1,
+
   centerMode: true,
   centerPadding: '50px',
   mobileFirst: true,
@@ -11,24 +34,26 @@ export const browseSettings = {
     {
       breakpoint: 1024,
       settings: {
-        centerMode: false,
-        slidesToShow: 3,
+        centerMode: true,
+        slidesToShow: 5,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 767,
       settings: {
-        centerMode: false,
-        slidesToShow: 2,
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 4,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 650,
       settings: {
-        centerMode: false,
-        slidesToShow: 1,
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 3,
         slidesToScroll: 1,
       },
     },
@@ -39,32 +64,35 @@ export const singleMenuSettings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 4,
+  slidesToShow: 6,
   slidesToScroll: 1,
+
   centerMode: true,
   centerPadding: '50px',
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        centerMode: false,
-        slidesToShow: 3,
+        centerMode: true,
+        slidesToShow: 5,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 767,
       settings: {
-        centerMode: false,
-        slidesToShow: 2,
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 4,
         slidesToScroll: 1,
       },
     },
     {
       breakpoint: 650,
       settings: {
-        centerMode: false,
-        slidesToShow: 1,
+        centerMode: true,
+        arrows: false,
+        slidesToShow: 3,
         slidesToScroll: 1,
       },
     },

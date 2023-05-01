@@ -5,6 +5,7 @@ import {
   LibraryProps,
 } from '../../components/LibraryCard/LibraryCard';
 import newRequest from '../../utils/newRequest';
+import { BiArrowBack } from 'react-icons/bi';
 
 export const Library = () => {
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
@@ -25,6 +26,12 @@ export const Library = () => {
         'Something went wrong!'
       ) : (
         <div className='library-content'>
+          <div className='library-top-section'>
+            <button className='library-back-button'>
+              <BiArrowBack size={30} />
+            </button>
+            <h1 className='library-main-title'>My Library</h1>
+          </div>
           {data.map((item: LibraryProps) => (
             <LibraryCard key={item.id} {...item} />
           ))}

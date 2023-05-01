@@ -24,15 +24,6 @@ export const MovieCard = ({
 
   return (
     <div className='movie-card'>
-      <img
-        className='movie-img'
-        src={
-          poster_path
-            ? `${base_url}${poster_path}`
-            : 'https://2.bp.blogspot.com/-1no2ep6vJ8U/WqVHSQtSsDI/AAAAAAAAAXI/xkIj0KGNDbkESV39miJuPPuBin3HlX4GgCLcBGAs/s1600/brokenImage.png'
-        }
-        alt={title}
-      />
       <div className='movie-body'>
         <Link
           to={`/movies/single/${id}`}
@@ -46,7 +37,15 @@ export const MovieCard = ({
             release_date,
           }}
         >
-          <button className='movie-button'>Movie Details</button>
+          <img
+            className='movie-img'
+            src={
+              poster_path
+                ? `${base_url}${poster_path}`
+                : 'https://2.bp.blogspot.com/-1no2ep6vJ8U/WqVHSQtSsDI/AAAAAAAAAXI/xkIj0KGNDbkESV39miJuPPuBin3HlX4GgCLcBGAs/s1600/brokenImage.png'
+            }
+            alt={title}
+          />
         </Link>
       </div>
     </div>

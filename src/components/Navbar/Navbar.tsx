@@ -10,6 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
+
   const navigate = useNavigate();
 
   const { isLoading, error, data, refetch } = useQuery({
@@ -50,12 +51,12 @@ export const Navbar = () => {
           <li>
             <Link
               className='navbar-menu-link'
-              to='/'
+              to='/browse'
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
               }}
             >
-              Home
+              Browse
             </Link>
           </li>
 
@@ -98,7 +99,9 @@ export const Navbar = () => {
       <div className='login-block'>
         {currentUser ? (
           <div className='login' onClick={() => setOpen(!open)}>
-            <div className='username'>{currentUser?.username}</div>
+            <div className='username'>
+              {currentUser?.username.substring(0, 1)}
+            </div>
             {open && (
               <div className='user-options' onClick={handleLogout}>
                 Logout

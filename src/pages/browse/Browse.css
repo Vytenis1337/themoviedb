@@ -3,21 +3,20 @@
 .browse {
   margin: auto;
   padding: 100px;
-
-  color: #333;
 }
 .post {
   padding: 30px 20px;
 }
 
 .browse-h1 {
-  font-size: 72px;
-  font-family: Prata;
+  font-size: 50px;
+
   background: -webkit-linear-gradient(black, black);
   box-shadow: #ffd700 4px 4px 0 0;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
   text-align: center;
+  color: #00bbf0;
 }
 
 /* card style start */
@@ -48,6 +47,9 @@
   .slick-slide > div {
     margin: 0 10px;
   }
+  .browse {
+    padding: 20px;
+  }
   .post {
     padding: 20px 10px;
   }
@@ -63,6 +65,9 @@
 @media screen and (min-width: 651px) and (max-width: 767px) {
   .slick-slide > div {
     margin: 0 10px;
+  }
+  .browse {
+    padding: 20px;
   }
   .post {
     padding: 20px 10px;
@@ -80,6 +85,9 @@
   .slick-slide > div {
     margin: 0 5px;
   }
+  .browse {
+    padding: 20px;
+  }
   .post {
     padding: 10px 5px;
   }
@@ -88,6 +96,6 @@
     padding: 30px;
   }
   .browse-h1 {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
