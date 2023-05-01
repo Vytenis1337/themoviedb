@@ -94,33 +94,34 @@ export const Navbar = () => {
               Contacts
             </Link>
           </li>
-        </ul>
-      </div>
-      <div className='login-block'>
-        {currentUser ? (
-          <div className='login' onClick={() => setOpen(!open)}>
-            <div className='username'>
-              {currentUser?.username.substring(0, 1)}
-            </div>
-            {open && (
-              <div className='user-options' onClick={handleLogout}>
-                Logout
+
+          <div className='login-block'>
+            {currentUser ? (
+              <div className='login' onClick={() => setOpen(!open)}>
+                <div className='username'>
+                  {currentUser?.username.substring(0, 1)}
+                </div>
+                {open && (
+                  <div className='user-options' onClick={handleLogout}>
+                    Logout
+                  </div>
+                )}
               </div>
+            ) : (
+              <li>
+                <Link
+                  to='/login'
+                  className='navbar-menu-link'
+                  onClick={() => {
+                    setIsNavExpanded(!isNavExpanded);
+                  }}
+                >
+                  Sign in
+                </Link>
+              </li>
             )}
           </div>
-        ) : (
-          <li>
-            <Link
-              to='/login'
-              className='navbar-menu-link'
-              onClick={() => {
-                setIsNavExpanded(!isNavExpanded);
-              }}
-            >
-              Sign in
-            </Link>
-          </li>
-        )}
+        </ul>
       </div>
     </div>
   );
