@@ -80,7 +80,8 @@
 }
 
 .single-description {
-  max-width: 300px;
+  max-width: 400px;
+  margin: auto 0;
   padding: 5px 5px;
   display: flex;
   display-direction: column;
@@ -176,6 +177,10 @@
   .back-button {
     transform: translatex(-150px);
   }
+  .single-p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -184,7 +189,7 @@
   }
   .single-p {
     font-size: 14px;
-    line-height: 30px;
+    line-height: 20px;
   }
   .back-button {
     transform: translatex(-100px);

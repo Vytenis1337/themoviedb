@@ -86,6 +86,7 @@
 
 .login-block {
   margin-right: 30px;
+  transform: translatex(-150px);
 }
 
 .login {
