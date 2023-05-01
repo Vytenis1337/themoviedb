@@ -109,11 +109,17 @@ export const Navbar = () => {
             )}
           </div>
         ) : (
-          <>
-            <Link to='/login' className='link'>
+          <li>
+            <Link
+              to='/login'
+              className='navbar-menu-link'
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
               Sign in
             </Link>
-          </>
+          </li>
         )}
       </div>
     </div>

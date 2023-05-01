@@ -132,7 +132,7 @@
     left: 0;
 
     flex-direction: column;
-
+    z-index: 999;
     width: 80%;
     height: 100vh;
     background-color: white;
