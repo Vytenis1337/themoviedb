@@ -32,6 +32,7 @@ type GlobalContextProps = {
   library: ListItem[];
   checkId: CheckItem[];
   setCheckId: Dispatch<SetStateAction<CheckItem[]>>;
+  currentUser: any;
 };
 
 // create context
@@ -49,6 +50,8 @@ export const GlobalProvider = ({ children }: GlobalProviderProps) => {
   // }, [state]);
 
   // actions
+
+  const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
   const [library, setLibrary] = useState<ListItem[]>([]);
 
   const [checkId, setCheckId] = useState<CheckItem[]>([]);
@@ -65,8 +68,6 @@ export const GlobalProvider = ({ children }: GlobalProviderProps) => {
 
   const removeFromWatched = (id: any) => {};
 
- 
-
   return (
     <GlobalContext.Provider
       value={{
@@ -78,6 +79,7 @@ export const GlobalProvider = ({ children }: GlobalProviderProps) => {
         library,
         checkId,
         setCheckId,
+        currentUser,
       }}
     >
       {children}

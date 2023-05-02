@@ -78,7 +78,7 @@ export const Navbar = () => {
           <li>
             <Link
               className='navbar-menu-library-link'
-              to='/library'
+              to={currentUser ? '/library' : '/login'}
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
               }}

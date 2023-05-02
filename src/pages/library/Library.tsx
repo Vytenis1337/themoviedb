@@ -16,6 +16,7 @@ export const Library = () => {
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['myMovies'],
+
     queryFn: () =>
       newRequest.get(`/movies?userId=${currentUser._id}`).then((res) => {
         return res.data;
