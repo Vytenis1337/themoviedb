@@ -4,10 +4,17 @@ import newRequest from '../../utils/newRequest';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaCity } from 'react-icons/fa';
 import { useQuery } from '@tanstack/react-query';
+import { mobileSocialIcons } from '../../utils/socialIcons';
+import { SocialIcon } from '../SocialIcon/SocialIcon';
+import { useRef } from 'react';
+import { useOutsideClick } from '../../hooks/useOutsideClick';
+import { useEscapeKey } from '../../hooks/useEscapeKey';
 
 export const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const modalRef = useRef(null);
 
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
 
@@ -34,6 +41,10 @@ export const Navbar = () => {
       console.log(err);
     }
   };
+  const handleClose = () => setOpen(false);
+
+  useOutsideClick(handleClose, modalRef);
+  useEscapeKey(handleClose);
 
   return (
     <div className='navbar'>
@@ -46,7 +57,10 @@ export const Navbar = () => {
           setIsNavExpanded(!isNavExpanded);
         }}
       ></button>
-      <div className={isNavExpanded ? 'navbar-menu expanded' : 'navbar-menu'}>
+      <div
+        className={isNavExpanded ? 'navbar-menu expanded' : 'navbar-menu'}
+        ref={modalRef}
+      >
         <ul>
           <li>
             <Link
@@ -80,7 +94,7 @@ export const Navbar = () => {
           <li>
             <Link
               className='navbar-menu-link'
-              to='/'
+              to='/contacts'
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
               }}
@@ -89,7 +103,7 @@ export const Navbar = () => {
             </Link>
           </li>
 
-          <div className='login-block'>
+          <>
             {currentUser ? (
               <div className='navbar-login' onClick={() => setOpen(!open)}>
                 <div className='username'>
@@ -114,6 +128,15 @@ export const Navbar = () => {
                 </Link>
               </li>
             )}
+          </>
+          <div
+            className={
+              isNavExpanded ? 'mobile-socialIcons' : 'navbar-socialIcons'
+            }
+          >
+            {mobileSocialIcons.map((item) => {
+              return <SocialIcon key={item.id} {...item} />;
+            })}
           </div>
         </ul>
       </div>

@@ -1,0 +1,60 @@
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: auto 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  background: #ffd700;
+  border: 3px solid;
+  padding: 15px;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+}
+
+.contacts-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-form-label {
+  font-weight: 500;
+}
+
+.contacts-form-input {
+  font-size: 30px;
+}
+
+.contacts-form-button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  background: #f18d9e;
+  cursor: pointer;
+  border: 3px solid;
+  margin-top: 20px;
+  padding: 15px;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.contacts-form-button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.contacts-form-button:hover {
+  transform: scale(1.1);
+  background: yellow;
+}
