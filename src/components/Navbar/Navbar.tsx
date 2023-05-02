@@ -15,6 +15,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const modalRef = useRef(null);
+  const mobileRef = useRef(null);
 
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
 
@@ -41,13 +42,16 @@ export const Navbar = () => {
       console.log(err);
     }
   };
-  const handleClose = () => setOpen(false);
+  const handleCloseLogin = () => setOpen(false);
+  const handleCloseMenu = () => setIsNavExpanded(false);
 
-  useOutsideClick(handleClose, modalRef);
-  useEscapeKey(handleClose);
+  useOutsideClick(handleCloseLogin, modalRef);
+  useOutsideClick(handleCloseMenu, mobileRef);
+
+  useEscapeKey(handleCloseLogin);
 
   return (
-    <div className='navbar'>
+    <div className='navbar' ref={modalRef}>
       <Link to='/' className='navbar-logo'>
         <FaCity size={50} />
       </Link>
@@ -58,8 +62,8 @@ export const Navbar = () => {
         }}
       ></button>
       <div
+        ref={mobileRef}
         className={isNavExpanded ? 'navbar-menu expanded' : 'navbar-menu'}
-        ref={modalRef}
       >
         <ul>
           <li>
@@ -110,7 +114,11 @@ export const Navbar = () => {
                   {currentUser?.username.substring(0, 1)}
                 </div>
                 {open && (
-                  <div className='user-options' onClick={handleLogout}>
+                  <div
+                    ref={modalRef}
+                    className='user-options'
+                    onClick={handleLogout}
+                  >
                     Logout
                   </div>
                 )}

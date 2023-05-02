@@ -7,6 +7,7 @@ import { MovieCard, MovieProps } from '../MovieCard/MovieCard';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { singleMenuSettings } from '../../utils/movieListSettings';
+import { Loading } from '../Loading/Loading';
 
 // interface stepType {
 //   id: string;
@@ -36,7 +37,7 @@ export const SingleMenu = ({ appId }: any) => {
     <div className='single-menu'>
       <h1 className='single-menu-h1'>Similar Movies</h1>
       {isLoading ? (
-        'loading'
+        <Loading />
       ) : error ? (
         'Something went wrong!'
       ) : (

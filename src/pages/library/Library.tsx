@@ -7,6 +7,7 @@ import {
 import newRequest from '../../utils/newRequest';
 import { BiArrowBack } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Library = () => {
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
@@ -24,7 +25,7 @@ export const Library = () => {
   return (
     <div className='library'>
       {isLoading ? (
-        'loading'
+        <Loading />
       ) : error ? (
         'Something went wrong!'
       ) : (

@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { browseSettings } from '../../utils/movieListSettings';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Browse = () => {
   const { isLoading, error, data } = useQuery({
@@ -58,7 +59,7 @@ export const Browse = () => {
     <div className='browse'>
       <h1 className='browse-h1'>Top Rated Movies</h1>
       {isLoading ? (
-        'loading'
+        <Loading />
       ) : error ? (
         'Something went wrong!'
       ) : (
@@ -70,7 +71,7 @@ export const Browse = () => {
       )}
       <h1 className='browse-h1'>Most Popular Movies</h1>
       {isLoadingPopular ? (
-        'loading'
+        <Loading />
       ) : errorPopular ? (
         'Something went wrong!'
       ) : (
@@ -82,7 +83,7 @@ export const Browse = () => {
       )}
       <h1 className='browse-h1'>Upcoming Movies</h1>
       {isLoadingUpcoming ? (
-        'loading'
+        <Loading />
       ) : errorUpcoming ? (
         'Something went wrong!'
       ) : (

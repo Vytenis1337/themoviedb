@@ -9,6 +9,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { BiArrowBack } from 'react-icons/bi';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Details = () => {
   const state = useLocation().state;
@@ -67,14 +68,17 @@ export const Details = () => {
   return (
     <div className='single'>
       {isLoading ? (
-        'loading'
+        <Loading />
       ) : error ? (
         'Something went wrong!'
       ) : (
         <div>
           <div className='single-content'>
             <div className='single-top'>
-              <button className='back-button' onClick={() => navigate(-1)}>
+              <button
+                className='back-button'
+                onClick={() => navigate('/browse')}
+              >
                 <BiArrowBack size={25} />
               </button>
               <div className='single-title'>

@@ -8,6 +8,7 @@ export const Register = () => {
   const [inputs, setInputs] = useState({
     username: '',
     email: '',
+    country: '',
     password: '',
   });
   const [err, setError] = useState(null);
@@ -52,6 +53,17 @@ export const Register = () => {
           type='email'
           placeholder='email'
           name='email'
+          onChange={handleChange}
+        />
+        <label className='auth-label' htmlFor=''>
+          Country
+        </label>
+        <input
+          className='auth-input'
+          required
+          type='text'
+          placeholder='lithuania'
+          name='country'
           onChange={handleChange}
         />
         <label className='auth-label' htmlFor=''>

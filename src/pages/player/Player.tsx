@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import ReactPlayer from 'react-player/youtube';
 import { useNavigate } from 'react-router-dom';
 import { BiArrowBack } from 'react-icons/bi';
+import { Loading } from '../../components/Loading/Loading';
 
 export const Player = () => {
   const { pathname } = useLocation();
@@ -27,7 +28,7 @@ export const Player = () => {
   return (
     <div className='player'>
       {isLoading ? (
-        'loading'
+        <Loading />
       ) : error ? (
         'Something went wrong!'
       ) : (
