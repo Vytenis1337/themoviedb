@@ -53,7 +53,7 @@ export const browseSettings = {
       settings: {
         centerMode: false,
         arrows: false,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 2,
       },
     },
@@ -73,27 +73,27 @@ export const singleMenuSettings = {
     {
       breakpoint: 1024,
       settings: {
-        centerMode: true,
+        centerMode: false,
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 767,
       settings: {
-        centerMode: true,
+        centerMode: false,
         arrows: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
       breakpoint: 650,
       settings: {
-        centerMode: true,
+        centerMode: false,
         arrows: false,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
   ],
