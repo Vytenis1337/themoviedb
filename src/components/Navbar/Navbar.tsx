@@ -13,7 +13,7 @@ export const Navbar = () => {
 
   const navigate = useNavigate();
 
-  const { isLoading, error, data, refetch } = useQuery({
+  const { data, refetch } = useQuery({
     queryKey: ['myMovies'],
     queryFn: () =>
       newRequest.get(`/movies?userId=${currentUser._id}`).then((res) => {
