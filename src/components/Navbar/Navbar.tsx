@@ -61,26 +61,20 @@ export const Navbar = () => {
           </li>
 
           <li>
-            {isLoading ? (
-              'loading'
-            ) : error ? (
-              'Something went wrong!'
-            ) : data.length ? (
-              <Link
-                className='navbar-menu-library-link'
-                to='/library'
-                onClick={() => {
-                  setIsNavExpanded(!isNavExpanded);
-                }}
-              >
-                Library
-                <div className='navbar-library-count'>
-                  <div className='navbar-library-count-number'>
-                    {data.length}
-                  </div>
+            <Link
+              className='navbar-menu-library-link'
+              to='/library'
+              onClick={() => {
+                setIsNavExpanded(!isNavExpanded);
+              }}
+            >
+              Library
+              <div className='navbar-library-count'>
+                <div className='navbar-library-count-number'>
+                  {data?.length}
                 </div>
-              </Link>
-            ) : null}
+              </div>
+            </Link>
           </li>
 
           <li>
@@ -97,7 +91,7 @@ export const Navbar = () => {
 
           <div className='login-block'>
             {currentUser ? (
-              <div className='login' onClick={() => setOpen(!open)}>
+              <div className='navbar-login' onClick={() => setOpen(!open)}>
                 <div className='username'>
                   {currentUser?.username.substring(0, 1)}
                 </div>

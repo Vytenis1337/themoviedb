@@ -6,9 +6,12 @@ import {
 } from '../../components/LibraryCard/LibraryCard';
 import newRequest from '../../utils/newRequest';
 import { BiArrowBack } from 'react-icons/bi';
+import { useNavigate } from 'react-router-dom';
 
 export const Library = () => {
   const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
+
+  const navigate = useNavigate();
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['myMovies'],
@@ -27,7 +30,10 @@ export const Library = () => {
       ) : (
         <div className='library-content'>
           <div className='library-top-section'>
-            <button className='library-back-button'>
+            <button
+              onClick={() => navigate(-1)}
+              className='library-back-button'
+            >
               <BiArrowBack size={30} />
             </button>
             <h1 className='library-main-title'>My Library</h1>

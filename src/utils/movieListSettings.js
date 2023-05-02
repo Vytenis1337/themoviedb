@@ -36,7 +36,7 @@ export const browseSettings = {
       settings: {
         centerMode: true,
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
@@ -45,7 +45,7 @@ export const browseSettings = {
         arrows: false,
         centerMode: true,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
     {
@@ -54,7 +54,7 @@ export const browseSettings = {
         centerMode: true,
         arrows: false,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
       },
     },
   ],

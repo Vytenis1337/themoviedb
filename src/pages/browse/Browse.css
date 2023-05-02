@@ -2,6 +2,7 @@
 
 .browse {
   margin: auto;
+  background: linear-gradient(#141e30, #243b55);
   padding: 100px;
 }
 .post {

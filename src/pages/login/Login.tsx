@@ -23,9 +23,9 @@ export const Login = () => {
   };
 
   return (
-    <div className='login'>
+    <div className='login-page'>
       <form className='login-form' onSubmit={handleSubmit}>
-        <h1 className='login-h1'>Sign in</h1>
+        <h1 className='login-h1'>Login</h1>
         <label className='login-label' htmlFor=''>
           Username
         </label>
@@ -50,9 +50,12 @@ export const Login = () => {
           Login
         </button>
         {error && error}
-        <span>
-          Don't have an account yet? <Link to='/register'>Register</Link>
-        </span>
+        <p>
+          Don't have an account yet?{' '}
+          <Link to='/register'>
+            <span>Register</span>
+          </Link>
+        </p>
       </form>
     </div>
   );

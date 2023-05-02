@@ -1,8 +1,6 @@
-.login {
-  display: flex;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
+.login-page {
+  background: linear-gradient(#141e30, #243b55);
+  height: 100vh;
 }
 .login-form {
   margin: auto;
@@ -15,10 +13,12 @@
 .login-h1 {
   margin-bottom: 20px;
   font-family: Prata;
+  color: #00bbf0;
 }
 
 .login-label {
   font-size: 18px;
+  color: white;
 }
 
 .login-input {
@@ -26,6 +26,14 @@
   border: 1px solid rgb(216, 214, 214);
 }
 
+.login-page p {
+  color: white;
+}
+.login-page span {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 20px;
+}
 .login-button {
   top: 0;
   left: 0;
@@ -33,7 +41,7 @@
   position: relative;
   display: inline-block;
   padding: 15px 25px;
-  background-color: #ffe800;
+  background-color: #ffd700;
 
   text-transform: uppercase;
   color: $brown;

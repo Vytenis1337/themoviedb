@@ -1,8 +1,6 @@
 .auth {
-  display: flex;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(#141e30, #243b55);
+  height: 100vh;
 }
 .auth-form {
   margin: auto;
@@ -14,16 +12,27 @@
 }
 .auth-h1 {
   margin-bottom: 20px;
+  color: #00bbf0;
   font-family: Prata;
 }
 
 .auth-label {
   font-size: 18px;
+  color: white;
 }
 
 .auth-input {
   padding: 25px;
   border: 1px solid rgb(216, 214, 214);
+}
+
+.auth p {
+  color: white;
+}
+.auth p span {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 20px;
 }
 
 .auth-button {
@@ -33,7 +42,7 @@
   position: relative;
   display: inline-block;
   padding: 15px 25px;
-  background-color: #ffe800;
+  background-color: #ffd700;
 
   text-transform: uppercase;
   color: $brown;

@@ -69,9 +69,12 @@ export const Register = () => {
           Register
         </button>
         {err && <p>{err}</p>}
-        <span>
-          Do you have an account? <Link to='/login'>Login</Link>
-        </span>
+        <p>
+          Do you have an account?{' '}
+          <Link to='/login'>
+            <span>Login</span>
+          </Link>
+        </p>
       </form>
     </div>
   );
