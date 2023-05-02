@@ -53,7 +53,7 @@ export const browseSettings = {
       settings: {
         centerMode: false,
         arrows: false,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 2,
       },
     },
