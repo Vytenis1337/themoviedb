@@ -24,21 +24,19 @@ export const Library = () => {
 
   return (
     <div className='library'>
+      <div className='library-top-section'>
+        <button onClick={() => navigate(-1)} className='library-back-button'>
+          <BiArrowBack size={30} />
+        </button>
+        <h1 className='library-main-title'>My Library</h1>
+      </div>
+
       {isLoading ? (
         <Loading />
       ) : error ? (
         'Something went wrong!'
       ) : (
         <div className='library-content'>
-          <div className='library-top-section'>
-            <button
-              onClick={() => navigate(-1)}
-              className='library-back-button'
-            >
-              <BiArrowBack size={30} />
-            </button>
-            <h1 className='library-main-title'>My Library</h1>
-          </div>
           {data.map((item: LibraryProps) => (
             <LibraryCard key={item.id} {...item} />
           ))}

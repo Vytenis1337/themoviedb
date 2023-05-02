@@ -35,16 +35,16 @@
 
 .navbar-menu-link {
   text-decoration: none;
-  padding: 0 30px;
-  font-size: 30px;
+  padding: 0 20px;
+  font-size: 20px;
   color: white;
 }
 
 .navbar-menu-library-link {
   text-decoration: none;
   display: flex;
-  padding: 0 30px;
-  font-size: 30px;
+  padding: 0 20px;
+  font-size: 20px;
   color: white;
 }
 
@@ -74,7 +74,7 @@
   width: 40px;
   padding: 0.5rem;
   border-radius: 50%;
-  background-color: #283b8b;
+  background-color: #c24d2c;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -111,7 +111,7 @@
   padding: 20px;
   background-color: white;
   border-radius: 10px;
-  z-index: 997;
+  z-index: 999;
   border: 1px solid lightgrey;
   display: flex;
   flex-direction: column;
@@ -135,7 +135,7 @@
   }
   .navbar-menu ul {
     position: absolute;
-    top: 50px;
+    top: 54px;
     left: 0;
 
     flex-direction: column;
@@ -154,7 +154,7 @@
     color: white;
     font-size: 25px;
     width: 100%;
-    padding: 24px 0;
+    padding: 24px 10px;
   }
   .navbar-menu li:hover {
     text-decoration: underline;

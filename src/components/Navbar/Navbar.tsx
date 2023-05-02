@@ -51,7 +51,7 @@ export const Navbar = () => {
   useEscapeKey(handleCloseLogin);
 
   return (
-    <div className='navbar' ref={modalRef}>
+    <div className='navbar' ref={mobileRef}>
       <Link to='/' className='navbar-logo'>
         <FaCity size={50} />
       </Link>
@@ -61,10 +61,7 @@ export const Navbar = () => {
           setIsNavExpanded(!isNavExpanded);
         }}
       ></button>
-      <div
-        ref={mobileRef}
-        className={isNavExpanded ? 'navbar-menu expanded' : 'navbar-menu'}
-      >
+      <div className={isNavExpanded ? 'navbar-menu expanded' : 'navbar-menu'}>
         <ul>
           <li>
             <Link
@@ -88,9 +85,11 @@ export const Navbar = () => {
             >
               Library
               <div className='navbar-library-count'>
-                <div className='navbar-library-count-number'>
-                  {data?.length}
-                </div>
+                {currentUser ? (
+                  <div className='navbar-library-count-number'>
+                    {data?.length}
+                  </div>
+                ) : null}
               </div>
             </Link>
           </li>

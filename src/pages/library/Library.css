@@ -3,18 +3,17 @@
   background: #e3e3e3;
   height: 100vh;
 }
-
+.library-top-section {
+  max-width: 800px;
+  border-bottom: 2px solid black;
+  display: flex;
+  margin: 20px auto;
+}
 .library-content {
   max-width: 800px;
   border: 2px solid black;
   margin: auto;
   background: white;
-}
-
-.library-top-section {
-  border-bottom: 2px solid black;
-  display: flex;
-  margin: auto;
 }
 
 .library-main-title {
