@@ -37,6 +37,7 @@ export const Navbar = () => {
     try {
       await newRequest.post('/auth/logout');
       localStorage.setItem('currentUser', null!);
+
       navigate('/');
     } catch (err) {
       console.log(err);
@@ -85,11 +86,9 @@ export const Navbar = () => {
             >
               Library
               <div className='navbar-library-count'>
-                {currentUser ? (
-                  <div className='navbar-library-count-number'>
-                    {data?.length}
-                  </div>
-                ) : null}
+                <div className='navbar-library-count-number'>
+                  {data?.length}
+                </div>
               </div>
             </Link>
           </li>
