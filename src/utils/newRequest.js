@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 const newRequest = axios.create({
-  baseURL: 'https://themoviedb-backend.onrender.com/',
+  baseURL: 'https://themoviedb-backend.onrender.com/api/',
   withCredentials: true,
-  crossDomain: true,
 });
 
 export default newRequest;
